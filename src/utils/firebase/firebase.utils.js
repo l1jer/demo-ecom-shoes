@@ -41,7 +41,6 @@ export const createUserDocumentFromAuth = async (
 ) => {
   const userDocRef = doc(db, "users", userAuth.uid);
   //In the db database, find 'user' collection then look for userAuth.uid
-
   console.log(userDocRef);
 
   const userSnapshot = await getDoc(userDocRef);

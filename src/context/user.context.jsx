@@ -20,6 +20,7 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener((user) => {
       console.log(user);
+      setCurrentUser(user);
     });
     // Take callback value to onAuthStateChanged, whenever an user login or log out
     // a permanent open listener
